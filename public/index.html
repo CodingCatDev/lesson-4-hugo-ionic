@@ -1,1 +1,538 @@
-You could make an entire site here if you wanted.
+<!DOCTYPE html>
+<html lang="en-us" class="md">
+  <head>
+    <meta name="generator" content="Hugo 0.52" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Home | Example-AJonP-Template
+    </title>
+
+    
+
+    
+
+  <meta name="author" content="ajonp">
+
+
+    <meta property="og:title" content="Home" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+<meta property="og:updated_time" content="2018-11-26T14:45:13-05:00"/>
+
+    
+
+  <meta property="og:image" content="https://res.cloudinary.com/ajonp/image/upload/w_500/v1543267002/ajonp-ajonp-com/youtube_banner.png">
+
+
+
+
+    
+
+<meta property="fb:app_id" content="&lt;your_name&gt;">
+
+
+
+    
+    
+    
+
+
+
+
+    
+    
+    
+    
+    <link
+      href="/index.xml"
+      rel="alternate"
+      type="application/rss+xml"
+      title="Example-AJonP-Template"
+    />
+    
+
+    <link rel="canonical" href="/" />
+    
+    
+
+    
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png" />
+<link
+  rel="apple-touch-icon"
+  sizes="114x114"
+  href="/icons/apple-icon-114x114.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="120x120"
+  href="/icons/apple-icon-120x120.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/icons/apple-icon-144x144.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/icons/apple-icon-152x152.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/icons/apple-icon-180x180.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="/icons/android-icon-192x192.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/icons/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="/icons/favicon-96x96.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/icons/favicon-16x16.png"
+/>
+<link rel="manifest" href="/manifest.json" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
+
+<meta name="theme-color" content="#3C2D4E" />
+
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://unpkg.com/@ionic/core@4.0.0-beta.16/css/ionic.bundle.css"
+/>
+<script src="https://unpkg.com/@ionic/core@4.0.0-beta.16/dist/ionic.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js" defer></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#eb6c44",
+      "text": "#ffffff"
+    },
+    "button": {
+      "background": "#f5d948"
+    }
+  },
+  "position": "top"
+})});
+</script>
+
+<script
+  defer
+  src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+  integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+  crossorigin="anonymous"
+></script>
+
+<script src="https://unpkg.com/clipboard@2.0.0/dist/clipboard.min.js" defer></script>
+<script>
+  window.addEventListener("load", function() {
+    (function(document) {
+      var $highlight = document.querySelectorAll(".highlight");
+
+      function addCopy(element) {
+        var copy = document.createElement("ion-button");
+        copy.setAttribute("shape", "round");
+        copy.setAttribute("size", "small");
+        copy.className = "copy";
+        copy.textContent = "copy";
+
+        var outer = document.createElement("div");
+        outer.setAttribute("class", "chroma");
+        outer.setAttribute("style","background:none")
+        outer.appendChild(copy);
+        element.prepend(outer);
+      }
+
+      for (var i = 0, len = $highlight.length; i < len; i++) {
+        var highlight = $highlight[i];
+        addCopy(highlight);
+        highlight.querySelector("pre").setAttribute("style","margin: .1em auto;padding: .5em;border-radius: .2em;");
+      }
+
+      var clipboard = new ClipboardJS(".copy", {
+        target: function(trigger) {
+          return trigger.parentElement.parentElement.querySelector("code");
+        }
+      })
+        .on("success", function(e) {
+          successMessage(e.trigger, "Copied!");
+          e.clearSelection();
+        })
+        .on("error", function(e) {
+          successMessage(e.trigger, fallbackMessage(e.action));
+        });
+    })(document);
+  });
+  function successMessage(elem, msg) {
+    var oldHTML = elem.innerHTML;
+    elem.setAttribute("fill", "outline");
+    elem.innerHTML = msg;
+    setTimeout(function() {
+      elem.innerHTML = oldHTML;
+      elem.setAttribute("fill", "solid");
+    }, 1000);
+  }
+
+  function fallbackMessage(elem, action) {
+    var actionMsg = "";
+    var actionKey = action === "cut" ? "X" : "C";
+    if (isMac) {
+      actionMsg = "Press ⌘-" + actionKey;
+    } else {
+      actionMsg = "Press Ctrl-" + actionKey;
+    }
+    return actionMsg;
+  }
+</script>
+
+ 
+
+<link
+rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4" defer></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css"
+/>
+ 
+ 
+
+
+
+    <link href="/css/custom.css" rel="stylesheet" as="style" type="text/css"> 
+    <link href="/css/syntax.css" rel="stylesheet" as="style" type="text/css">
+  </head>
+
+  <body>
+    <ion-app>
+      <ion-split-pane when="md">
+         <ion-menu style="border:none;">
+  <ion-header>
+    <ion-toolbar color="primary"> <ion-title>Menu</ion-title> </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="false">
+         
+        <ion-item button href="/">
+          <ion-icon slot="start" name="home" color="primary"></ion-icon>
+          <ion-label> Home </ion-label>
+        </ion-item>
+        
+        <ion-item button href="/blog/">
+          <ion-icon slot="start" name="book" color="primary"></ion-icon>
+          <ion-label> Blog </ion-label>
+        </ion-item>
+        
+      </ion-menu-toggle>
+      <ion-row justify-content-center>
+          
+          
+            
+                    
+                        <ion-button class="ajonp-github" href="https://github.com/gohugo">
+                            <i class="fab fa-github fa-lg"></i>
+                        </ion-button>
+                    
+                    
+                        <ion-button class="ajonp-twitter" href="https://twitter.com/ajonpcom">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </ion-button>
+                    
+                    
+                    
+                        <ion-button class="ajonp-youtube" href="https://www.youtube.com/channel/%3Cyour_name%3E">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </ion-button>
+                    
+            
+        
+      
+      </ion-row>
+    </ion-list>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Home</ion-card-title>
+      </ion-card-header>
+      <ion-card-content> 
+    <nav id="menu"></nav>
+
+ </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-menu>
+  
+<ion-page class="ion-page" main>
+    <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button href="/">
+        <ion-icon src="/images/ajonp_logo.svg" size="large" slot="icon-only">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div id="search-box" style="width: 80%;margin: auto;"></div>
+  </ion-toolbar>
+  <div id="algolia-powered" hidden>
+  <ion-button
+    href="https://www.algolia.com/?utm_source=instantsearch.js&utm_medium=website&utm_content=localhost&utm_campaign=poweredby"
+    color="light"
+    fill="block"
+  >
+  Search By
+    <img
+      src="/images/logo-algolia-nebula-blue-whitespaces-bf76438c.svg"
+      alt="Algolia Logo"
+      style="width: 150px;"
+    />
+  </ion-button>
+</div>
+<div id="refinement-list"></div>
+<div id="hits"></div>
+</ion-header>
+
+  <ion-content padding>
+    <ion-grid>
+      
+      <ion-row justify-content-center>  
+        <ion-card>
+          
+          <ion-img src="https://res.cloudinary.com/ajonp/image/upload/v1544021089/ajonp-ajonp-com/Logos/ajonp/welcom_card.png" alt="Home Banner"></ion-img>
+          
+          
+    
+        
+        <ion-row justify-content-center>
+            
+            <ion-col size="6" size-sm>
+                <ion-button class="ajonp-github" expand="block" href="https://github.com/gohugo">
+                    <i class="fab fa-github" data-fa-transform="left-6"></i>GitHub
+                </ion-button>
+            </ion-col>
+            
+            
+            <ion-col size="6" size-sm>
+                <ion-button class="ajonp-twitter" expand="block" href="https://twitter.com/ajonpcom">
+                    <i class="fab fa-twitter" data-fa-transform="left-6"></i>Twitter
+                </ion-button>
+            </ion-col>
+            
+            
+            
+            <ion-col size="6" size-sm>
+                <ion-button class="ajonp-youtube" expand="block" href="https://www.youtube.com/channel/%3Cyour_name%3E">
+                    <i class="fab fa-youtube" data-fa-transform="left-6"></i>YouTube
+                </ion-button>
+            </ion-col>
+            
+        </ion-row>
+    
+
+        </ion-card>
+      
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center> <h2>Recent Lessons</h2> </ion-row>
+      <ion-row justify-content-center>
+        
+        <a href="/lessons/4-hugo-ionic/" style="text-decoration: none;">
+  <ion-card style="max-width:400px">
+    <ion-item>
+      <ion-label>Hugo Ionic Template</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <p>How to use AJonP&#39;s Hugo Ionic Template</p>
+    </ion-card-content>
+     
+    <ion-img src="https://res.cloudinary.com/ajonp/image/upload/f_auto,fl_lossy,q_auto/v1543792067/ajonp-ajonp-com/ajonp-hugo-theme/aj_on_hugo_ionic.png" alt="Hero Image"></ion-img>
+     
+  </ion-card>
+</a>
+
+        
+        <a href="/lessons/3-npm/" style="text-decoration: none;">
+  <ion-card style="max-width:400px">
+    <ion-item>
+      <ion-label>NPM</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <p>Quick Tips for NPM</p>
+    </ion-card-content>
+     
+    <ion-img src="https://res.cloudinary.com/ajonp/image/upload/f_auto,fl_lossy,q_auto/v1543792850/ajonp-ajonp-com/3-lesson-npm/aj_on_npm.png" alt="Hero Image"></ion-img>
+     
+  </ion-card>
+</a>
+
+        
+        <a href="/lessons/2-firebase-ci/" style="text-decoration: none;">
+  <ion-card style="max-width:400px">
+    <ion-item>
+      <ion-label>Google Cloud Repositories CI/CD</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <p>Google Cloud Continuous Integration and Delivery</p>
+    </ion-card-content>
+     
+    <ion-img src="https://res.cloudinary.com/ajonp/image/upload/f_auto,fl_lossy,q_auto/v1543793005/ajonp-ajonp-com/2-lesson-gcp-cloud-build/aj_on_firebaseCI.png" alt="Hero Image"></ion-img>
+     
+  </ion-card>
+</a>
+
+        
+        <a href="/lessons/1-creating-firebase-project/" style="text-decoration: none;">
+  <ion-card style="max-width:400px">
+    <ion-item>
+      <ion-label>Firebase Project</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <p>Creating a firebase project.</p>
+    </ion-card-content>
+     
+    <ion-img src="https://res.cloudinary.com/ajonp/image/upload/f_auto,fl_lossy,q_auto/v1543773086/ajonp-ajonp-com/1-lesson/aj_on_firebase.png" alt="Hero Image"></ion-img>
+     
+  </ion-card>
+</a>
+
+        
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+</ion-page>
+
+        
+      </ion-split-pane>
+    </ion-app>
+    <ion-menu-controller></ion-menu-controller>
+    
+
+
+<script>
+    window.addEventListener("load", function() {
+      const search = instantsearch({
+        appId: "\x3cyour_name\x3e",
+        apiKey: "your_name",
+        indexName: "your_name",
+        
+        searchFunction(helper) {
+          if (helper.state.query === '') {
+            document.getElementById("algolia-powered").hidden = true;
+            document.getElementById("refinement-list").hidden = true;
+            document.getElementById("hits").hidden = true;
+          }else{
+            var headOffset = document.getElementsByTagName("ion-page")[0].getElementsByTagName("ion-header")[0].offsetHeight;
+            var pageOffset = document.getElementsByTagName("ion-page")[0].offsetWidth;
+
+            var p = document.getElementById("algolia-powered");
+            p.hidden = false;
+            p.setAttribute("style", 
+            `
+            position:absolute;
+            top:${headOffset}px;
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,.16);
+            width: ${pageOffset - 40}px;
+            z-index: 100;
+            padding: 5px;
+            margin-left: 20px;`);
+
+            
+
+            var h = document.getElementById("hits");
+            h.setAttribute("style", 
+            `position:absolute; 
+            top:${p.offsetHeight + headOffset}px;
+            background: #fff;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+            box-shadow: 0 10px 20px rgba(0,0,0,.16);
+            width: ${pageOffset - 40}px;
+            z-index: 100;
+            padding: 5px;
+            margin-left: 20px;
+            `);
+            h.hidden = false;
+          }
+      
+          helper.search();
+        }
+      });
+      search.addWidget(
+        instantsearch.widgets.refinementList({
+          container: '#refinement-list',
+          attributeName: 'categories',
+          autoHideContainer: true,
+          collapsible: { collapsed: false },
+        })
+      );
+      search.addWidget(
+        instantsearch.widgets.searchBox({
+          container: '#search-box',
+          placeholder: 'Search for products',
+          reset: true,
+          loadingIndicator: true,
+        })
+      );
+      search.addWidget(
+        instantsearch.widgets.hits({
+          container: "#hits",
+          templates: {
+            empty: 'No results',
+            item: ' \x3cion-item href={{permalink}}\x3e{{{_highlightResult.title.value}}}\x3c\/ion-item\x3e '
+          }
+        })
+      );
+      search.start();
+    });
+  </script>
+  
+  
+  
+  </body>
+</html>
