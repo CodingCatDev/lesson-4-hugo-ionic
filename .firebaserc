@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ajonp-hosting-lessons"
+  },
+  "targets": {
+    "ajonp-hosting-lessons": {
+      "hosting": {
+        "ajonp-lesson-4-hugo-ionic": [
+          "ajonp-lesson-4-hugo-ionic"
+        ]
+      }
+    }
+  }
+}

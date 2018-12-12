@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "ajonp-lesson-4-hugo-ionic",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
