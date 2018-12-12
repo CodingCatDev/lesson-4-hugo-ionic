@@ -65,5 +65,3 @@ node_modules/
 .env
 
 dist/
-
-site/public/*
