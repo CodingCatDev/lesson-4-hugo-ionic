@@ -1,0 +1,3 @@
+[submodule "site/themes/ajonp-hugo-ionic"]
+	path = site/themes/ajonp-hugo-ionic
+	url = https://github.com/AJONPLLC/ajonp-hugo-ionic
