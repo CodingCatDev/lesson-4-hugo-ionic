@@ -4,8 +4,8 @@ steps:
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/hugo', './dockerfiles/hugo' ]
 # Git the submodules, run npm install, hugo build
 - name: 'gcr.io/$PROJECT_ID/hugo'
-  args: ['bash', './deploy.sh']
-# Algolia index update
+  args: ['bash', './deploy.sh'] #If you are not mapping github->gcloud repos use this.
+# Algolia index update, for env variables check https://www.youtube.com/watch?v=MijHRE5h6Gg
 - name: 'gcr.io/cloud-builders/npm'
   args: [ 'run','algolia']
   env: 
@@ -16,7 +16,7 @@ steps:
 # sw-precache
 - name: 'gcr.io/cloud-builders/npm'
   args: [ 'run','generate-service-worker']
-# Build the firebase image
+# Build the firebase image check https://www.youtube.com/watch?v=MijHRE5h6Gg
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/firebase', './dockerfiles/firebase' ]
 # Deploy to firebase
