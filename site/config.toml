@@ -33,10 +33,10 @@ pygmentsCodeFences = "true"
   fb_app_id = "<your_name>"
 
   # Search Only
-  [params.algolia]
-    appId = "<your_name>"
-    apiKey = "your_name"
-    indexName = "your_name"
+#   [params.algolia]
+#     appId = "<your_name>"
+#     apiKey = "<your_name>"
+#     indexName = "<your_name>"
   [params.home]
     image = "https://res.cloudinary.com/ajonp/image/upload/v1544021089/ajonp-ajonp-com/Logos/ajonp/welcom_card.png"
     title = "Welcome to AJonP"
